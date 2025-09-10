@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+      body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgZH_EK2Ri2r-zXJ3FMuBLHCDFCSjLGQQXsA&usqp=CAU");
+        background-repeat: no-repeat;
+        background-size: cover;
+	}
+    </style>
+ <link rel = "stylesheet" href="{{url_for('static',filename='css/style.css')}}"> 
+</head>
+<body>
+  
+<div class="bg-img">
+  
+<center><h1 style="color:rgb(182, 0, 73)">Diabetes Prediction</h1></center>
+
+  <form action="/login" method = "post" class="container">
+    <center><!--<input type="text" name="area" placeholder="Enter Area"/>-->
+        <input type="text" name="age" placeholder="Enter Age"/>
+        <input type="text" name="p" placeholder="Enter Pregnancies"/>
+        <input type="text" name="gluc" placeholder="Enter Glucose"/>
+        <input type="text" name="BP" placeholder="Enter Blood Pressure"/>
+        <input type="text" name="bmi" placeholder="Enter BMI"/>
+        <input type="text" name="St" placeholder="Enter SkinThickness"/>
+       
+        <input type="text" name="ins" placeholder="Enter Insulin"/>
+        <!--<input type="text" name="soil" placeholder="Enter Soil type"/>
+        <input type="text" name="dist" placeholder="Enter District name"/>
+        <input type="text" name="ph" placeholder="Enter PH"/>
+        <input type="text" name="rain" placeholder="Enter Rainfall"/>-->
+        <button type="submit" class="btn">Predict</button>
+        <div class="bor"><center><b><font color="Black" size=5>{{showcase}}</font></b></center></div>
+        </center>
+  </form>
+</div>
+</body>
+</html>

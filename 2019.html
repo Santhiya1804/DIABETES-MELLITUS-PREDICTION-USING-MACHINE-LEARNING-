@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+      body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgZH_EK2Ri2r-zXJ3FMuBLHCDFCSjLGQQXsA&usqp=CAU");
+        background-repeat: no-repeat;
+        background-size: cover;
+	}
+    </style>
+ <link rel = "stylesheet" href="{{url_for('static',filename='css/style.css')}}"> 
+</head>
+<body>
+  
+<div class="bg-img">
+  
+
+         <center><h1 style="color:rgb(182, 0, 73)">Diabetes Prediction</h1></center>
+    
+  <form action="/login" method = "post" class="container">
+    <form method="POST" action="/submit">
+<center>
+                
+                  <p><label for="Age">Choose Age:</label>
+                  <select id="Age" name="Age">
+                      <option value="40-49">40-49</option>
+                      <option value="50-59">50-59</option>
+                      <option value="60 or older">60 or older</option>
+                      <option value="less than 40">less than 40</option>
+                  </select></p>
+                  
+                    <p><label for="Gender">Choose Gender:</label>
+                    <select id="Gender" name="Gender">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select></p>
+        <p><label for="Family Diabetes">Does your parent affect by Diabetes?:</label>
+        <select id="FD" name="FD">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select></p>
+
+        <p><label for="High BP">Do you have high BP?:</label>
+        <select id="BP" name="BP">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select></p>
+
+        <p><label for="Phy Active">How long are you Physically Active?:</label>
+        <select id="PA" name="PA">
+            <option value="less than half an hr">less than half an hr</option>
+            <option value="more than half an hr">more than half an hr</option>
+            <option value="one hr or more">one hr or more</option>
+            <option value="Not Active">Not Active</option>
+        </select></p>
+
+        <p><label for="Smoking">Do you smoke?:</label>
+        <select id="Smoking" name="Smoking">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>   
+        </select></p>
+
+        <p><label for="Alcohol">Do you drink Alcohol?:</label>
+        <select id="Alcohol" name="Alcohol">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>   
+        </select></p>
+
+        <p><label for="Junk Food">How often do you eat junk food?:</label>
+        <select id="JF" name="JF">
+              <option value="Always">Always</option>
+              <option value="Occasionally">Occasionally</option>
+              <option value="Often">Often</option>
+              <option value="Very Often">Very Often</option>
+          </select></p>
+
+       <p><label for="Stress">Stress Level:</label>
+       <select id="Stress" name="Stress">
+             <option value="Always">Always</option>
+             <option value="Not at all">Not at all</option>
+             <option value="Sometimes">Sometimes</option>
+             <option value="Very Often">Very Often</option>
+         </select></p>
+
+         <p><label for="Uriation Frequency">Uriation Frequency:</label>
+         <select id="UF" name="UF">
+               <option value="Not Much">Not Much</option>
+               <option value="Quite Often">Quite Often</option>            
+           </select></p>
+
+           <input type="text" name="BMI" placeholder="Enter BMI"/>
+           <input type="text" name="Sleep" placeholder="Hours of Sleep"/>
+           <input type="text" name="Sound_Sleep" placeholder="Hours of sound sleep"/>
+           <input type="text" name="Pregnancies" placeholder="How many Pregnancies?"/>           
+
+        <button type="submit" class="btn">Predict</button>
+        <div class="bor"><center><b><font color="Black" size=5>{{showcase}}</font></b></center></div>
+
+</center>
+     </form>
+     </form>
+</div>
+</body>
+</html>
